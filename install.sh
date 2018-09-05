@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# git clone https://github.com/CrateC/remove_miner_fees.git && cd remove_miner_fees
+
 # Install dependencies
 sudo apt-get update
 sudo apt-get install -y python-nfqueue python-scapy
