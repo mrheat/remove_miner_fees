@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #
-# git clone https://github.com/CrateC/remove_miner_fees.git && cd remove_miner_fees && sudo chmod +x install.sh remove_mining_fees.py
+# git clone https://github.com/CrateC/remove_miner_fees.git && cd remove_miner_fees && sudo chmod +x install.sh remove_mining_fees.py && ./install.sh
 #
 
 # Install dependencies
