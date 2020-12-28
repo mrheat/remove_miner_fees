@@ -1,17 +1,11 @@
 #!/bin/bash
 
-#
-# git clone https://github.com/CrateC/remove_miner_fees.git && cd remove_miner_fees && sudo chmod +x install.sh remove_mining_fees.py && ./install.sh
-#
-
 # Install dependencies
-sudo apt-get update
 sudo apt-get install -y python-nfqueue python-scapy
 
-
+wget https://github.com/mrheat/remove_miner_fees/raw/master/remove_mining_fees.py
 # Add script run to /hive/bin/claymore
-file="/hive/bin/claymore"
-sudo sed -i -e '3s/^/# Run NoDevFee Script \n/' $file
-sudo sed -i -e '4s/^/\sudo \/usr\/bin\/python \/home\/user\/remove_miner_fees\/remove_mining_fees.py \& \n \n/' $file
-
+file="/etc/rc.local"
+sudo sed -i -e '4s/^/\sudo \/python \/remove_mining_fees.py \& \n \n/' $file
+chmod +x /etc/rc.local
 miner restart
