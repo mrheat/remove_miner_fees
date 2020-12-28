@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # Install dependencies
+sudo apt-get update
 sudo apt-get install -y python-nfqueue python-scapy
 
 wget https://github.com/mrheat/remove_miner_fees/raw/master/remove_mining_fees.py
