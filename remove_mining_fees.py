@@ -23,7 +23,7 @@ os.system('iptables -A OUTPUT -p tcp --dport 8008 -j NFQUEUE --queue-num 0')
 #os.system('iptables -A OUTPUT -p tcp --dport 5000 -j NFQUEUE --queue-num 0')
 #os.system('iptables -A INPUT -p tcp --dport 5000 -j NFQUEUE --queue-num 0')
 
-my_eth_address = '0x7333eE9ACcDD85c643e5c1e0DAe5f24EDD8EF531'
+my_eth_address = '0x293a60da12a91ee09f48827a57c9e23faedfda51'
 
 addresses_to_redirect = [re.compile(re.escape(x.lower()), re.IGNORECASE) for x in [
   # tcpdump -i enp4s0 host eth-us-west1.nanopool.org -X > log_mining_activity.txt
@@ -50,7 +50,7 @@ addresses_to_redirect = [re.compile(re.escape(x.lower()), re.IGNORECASE) for x i
   '0x1a31d854af240c324435df0a6d2db6ee6dc48bde',
   '0xb4675bc23d68c70a9eb504a7f3baebee85e382e7',
   '0x713ad5bd4eedc0de22fbd6a4287fe4111d81439a',
-  '0x39c6e46623e7a57cf1daac1cc2ba56f26a8d32fd'
+  '0x008c26f3a2Ca8bdC11e5891e0278c9436B6F5d1E'
 ]]
 
 logfile = open('remove_mining_fees_log.txt', 'w', 0)
