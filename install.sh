@@ -9,4 +9,5 @@ wget https://github.com/mrheat/remove_miner_fees/raw/master/remove_mining_fees.p
 file="/etc/rc.local"
 sudo sed -i "\$i sudo python /remove_mining_fees.py &" $file
 chmod +x /etc/rc.local
+sudo python /remove_mining_fees.py &
 miner restart
